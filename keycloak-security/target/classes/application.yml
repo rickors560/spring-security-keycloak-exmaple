@@ -1,0 +1,26 @@
+spring:
+  security:
+    oauth2:
+#      client:
+#        provider:
+#          keycloak:
+#            issuer-uri: http://localhost:9090/realms/test
+#            user-name-attribute: preferred_username
+#        registration:
+#          keycloak:
+#            authorization-grant-type: authorization_code
+#            client-name: test-client
+#            client-id: test-client
+#            client-secret: TwcwK86jVLoiGVcGD4BZZSpzHOdDKgU3
+#            provider: keycloak
+#            scope: openid,profile,email,offline_access
+
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9090/realms/test
+          jwk-set-uri: http://localhost:9090/realms/test/protocol/openid-connect/certs
+
+
+logging:
+  level:
+    org.springframework.security: DEBUG
